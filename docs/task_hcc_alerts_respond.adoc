@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: docs/hcc_dashboard.html 
+summary: Hybrid Cloud Control のダッシュボードでアラートに対応することができます。 
+keywords: netapp, hci, hcc, on premise, alerts, warnings 
+---
+= Hybrid Cloud Control Dashboard のアラートに応答します
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Hybrid Cloud Control のダッシュボードでアラートを確認して対応することができます。
+
+
+
+== 手順
+
+. ログインページに移動し https://fabric.netapp.io["NetApp Fabric Orchestrator"^]ます。
+. Cloud Centralのログインクレデンシャルを入力し、* Login *を選択します。
++
+
+TIP: システムが表示されない場合は、 NetApp HCI 管理者がネットアップクラウドセントラルアカウントに追加されていることを確認してください。
+
+. Cloud Centralアカウントをお持ちでない場合は、Cloud Centralのログインページで*[Sign Up]*を選択します。
++
+Cloud Central では、アカウントを個別のアカウントとしてセットアップすることも、フェデレーテッドアカウントとしてセットアップすることもできます。
+
++
+.. 名前、電子メール、パスワードで新しいアカウントを作成すると、ログインします。これは最も簡単なタイプのアカウントです。
+.. Cloud Central のフェデレーテッド組織に所属している場合は、 E メールアドレスを入力すると組織のログインページに転送されます。
+
+
+. 他の Cloud Central 製品から、「 * Products * > * NetApp Fabric Orchestrator * 」を選択します。
+
+
+[discrete]
+== 詳細情報
+
+* https://cloud.netapp.com/home["NetApp Cloud Central"^]
+* https://docs.netapp.com/us-en/cloud/["ネットアップのクラウドに関するドキュメント"^]
+

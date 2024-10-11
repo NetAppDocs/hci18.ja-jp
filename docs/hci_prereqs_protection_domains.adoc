@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: docs/hci_prereqs_protection_domains.html 
+summary: NetApp HCI ストレージクラスタの保護ドメイン機能について説明します。 
+keywords: netapp, hci, element, storage, protection domains 
+---
+= 保護ドメイン
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp Element ソフトウェアでは、保護ドメイン機能がサポートされています。保護ドメインは、ストレージノードのデータレイアウトを最適化してデータの可用性を最大限に高める機能です。この機能を使用するには、 3 台以上の NetApp H シリーズシャーシにストレージ容量を均等に分割して、ストレージの信頼性を最適化する必要があります。この場合、ストレージクラスタで保護ドメインが自動的に有効になります。
+
+[discrete]
+== 詳細情報
+
+* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+

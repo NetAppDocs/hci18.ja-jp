@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: docs/task_nde_start_deployment.html 
+summary: NetApp HCI の導入を開始します。 
+keywords: netapp, hci, netapp deployment engine, deployment, engine, deploy, access 
+---
+= 導入を開始
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp HCI の導入を続行する前に、エンドユーザライセンス契約を読んで内容を理解しておく必要があります。
+
+.手順
+. [Welcome to（NetApp HCIへようこそ）]ページで、[Get Started（開始）]*を選択します。
+. [ 前提条件 *] ページで、次の操作を行います。
++
+.. 各前提条件が満たされていることを確認し、関連する各チェックボックスをオンにして確定します。
+.. 「 * Continue * 」を選択します。
+
+
+. [* エンドユーザーライセンス * （ End User Licenses * ） ] ページで、次の手順を実行します。
++
+.. ネットアップのエンドユーザライセンス契約を読みます
+.. 契約条件に同意する場合は、契約のテキストの下部にある*[同意します]*を選択します。
+.. VMware のエンドユーザライセンス契約を読みます。
+.. 契約条件に同意する場合は、契約のテキストの下部にある*[同意します]*を選択します。
+.. 「 * Continue * 」を選択します。
+
+
+
+
+[discrete]
+== 詳細情報
+
+* link:firmware_driver_versions.html["NetApp HCI でサポートされるファームウェアとESXiドライバのバージョン、NetApp HCI ストレージノードでサポートされるファームウェアのバージョンとファームウェアのバージョン"]
+

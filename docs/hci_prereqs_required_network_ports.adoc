@@ -1,0 +1,230 @@
+---
+sidebar: sidebar 
+permalink: docs/hci_prereqs_required_network_ports.html 
+summary: NetApp HCI で使用される TCP ポートと UDP ポート。 
+keywords: netapp, hci, ports, tcp, udp 
+---
+= ネットワークポートの要件
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+システムをリモートで管理し、データセンター外部のクライアントがリソースに接続できるようにし、内部サービスが正常に機能するようにするために、データセンターのエッジファイアウォールで次のポートを許可する必要があります。システムの使用方法によっては、これらのポート、 URL 、または IP アドレスの一部は不要な場合もあります。
+
+特に記載がないかぎり、すべてのポートがTCPであり、NetAppサポートサーバ、管理ノード、およびElementソフトウェアを実行するノードの間の3ウェイハンドシェイク通信がすべてサポートされている必要があります。たとえば、管理ノードのソースのホストはTCPポート443を介してストレージクラスタのMVIPデスティネーションのホストと通信し、デスティネーションホストは任意のポートを介してソースホストと通信します。
+
+この表では次の略語を使用します。
+
+* mip ：管理 IP アドレス。ノードごとのアドレスです
+* sip ：ストレージ IP アドレス。ノードごとのアドレスです
+* MVIP ：管理仮想 IP アドレス
+* SVIP ：ストレージ仮想 IP アドレス
+
+
+|===
+| ソース | デスティネーション | ポート | 製品説明 
+
+
+| コンピューティングノードの BMC / IPMI | 管理ノード | 111 TCP/UDP | NetApp Hybrid Cloud Control の API 通信 
+
+
+| コンピューティングノードの BMC / IPMI | 管理ノード | UDP 137-138 | NetApp Hybrid Cloud Control の API 通信 
+
+
+| コンピューティングノードの BMC / IPMI | 管理ノード | 445 | NetApp Hybrid Cloud Control の API 通信 
+
+
+| コンピューティングノードの BMC / IPMI | 管理ノード | 623 UDP | Remote Management Control Protocol （ RMCP ）ポート。NetApp Hybrid Cloud Control のコンピューティングファームウェアをアップグレードする場合は必須です。 
+
+
+| コンピューティングノードの BMC / IPMI | 管理ノード | 2049 TCP/UDP | NetApp Hybrid Cloud Control の API 通信 
+
+
+| iSCSIクライアント | ストレージクラスタのMVIP | 443 | （オプション） UI および API アクセス 
+
+
+| iSCSIクライアント | ストレージクラスタのSVIP | 3260 | クライアント iSCSI 通信 
+
+
+| iSCSIクライアント | ストレージノード SIP | 3260 | クライアント iSCSI 通信 
+
+
+| 管理ノード | `sfsupport.solidfire.com` | 22 | サポートアクセス用リバース SSH トンネル 
+
+
+| 管理ノード | ストレージノード MIP | 22 | サポート用 SSH アクセス 
+
+
+| 管理ノード | DNSサーバ | 53 TCP/UDP | DNSルックアップ 
+
+
+| 管理ノード | コンピューティングノードの BMC / IPMI | 139 | NetApp Hybrid Cloud Control の API 通信 
+
+
+| 管理ノード | ストレージノード MIP | 442 | ストレージノードおよび Element ソフトウェアへの UI および API アクセス アップグレード 
+
+
+| 管理ノード | ストレージノード MVIP | 442 | ストレージノードおよび Element ソフトウェアへの UI および API アクセス アップグレード 
+
+
+| 管理ノード | `23.32.54.122`、 `216.240.21.15` | 443 | Element ソフトウェアのアップグレード 
+
+
+| 管理ノード | ベースボード管理コントローラ（ BMC ） | 443 | ハードウェア監視およびインベントリ接続（ Redfish および IPMI コマンド） 
+
+
+| 管理ノード | コンピューティングノードの BMC / IPMI | 443 | NetApp Hybrid Cloud Control の HTTPS 通信 
+
+
+| 管理ノード | `monitoring.solidfire.com` | 443 | Active IQ に報告するストレージクラスタ 
+
+
+| 管理ノード | ストレージクラスタのMVIP | 443 | ストレージノードおよび Element ソフトウェアへの UI および API アクセス アップグレード 
+
+
+| 管理ノード | VMware vCenter | 443 | NetApp Hybrid Cloud Control の HTTPS 通信 
+
+
+| 管理ノード | コンピューティングノードの BMC / IPMI | 623 UDP | Remote Management Control Protocol （ RMCP ）ポート。NetApp Hybrid Cloud Control のコンピューティングファームウェアをアップグレードする場合は必須です。 
+
+
+| 管理ノード | ストレージノードのBMC / IPMI | 623 UDP | RMCPポート。これはIPMI対応のシステムを管理するために必要です。 
+
+
+| 管理ノード | VMware vCenter | 5988-5989 | NetApp Hybrid Cloud Control の HTTPS 通信 
+
+
+| 管理ノード | 監視ノード | 9442 | ノード単位の設定 API サービス 
+
+
+| 管理ノード | vCenter Server | 9443 | vCenter Plug-in の登録。登録が完了したら、ポートを閉じることができます。 
+
+
+| SNMPサーバ | ストレージクラスタのMVIP | 161 UDP | SNMP ポーリング 
+
+
+| SNMPサーバ | ストレージノード MIP | 161 UDP | SNMP ポーリング 
+
+
+| ストレージノードのBMC / IPMI | 管理ノード | 623 UDP | RMCPポート。これはIPMI対応のシステムを管理するために必要です。 
+
+
+| ストレージノード MIP | DNSサーバ | 53 TCP/UDP | DNSルックアップ 
+
+
+| ストレージノード MIP | 管理ノード | 80 | Element ソフトウェアのアップグレード 
+
+
+| ストレージノード MIP | S3 / Swift エンドポイント | 80 | （オプション）バックアップとリカバリ用の S3 / Swift エンドポイントへの HTTP 通信 
+
+
+| ストレージノード MIP | NTPサーバ | 123 UDP | NTP 
+
+
+| ストレージノード MIP | 管理ノード | 162 UDP | （任意） SNMP トラップ 
+
+
+| ストレージノード MIP | SNMPサーバ | 162 UDP | （任意） SNMP トラップ 
+
+
+| ストレージノード MIP | LDAPサーバ | 389 TCP/UDP | （任意） LDAP 検索 
+
+
+| ストレージノード MIP | 管理ノード | 443 | Element ソフトウェアのアップグレード 
+
+
+| ストレージノード MIP | リモートストレージクラスタのMVIP | 443 | リモートレプリケーションのクラスタペアリング通信 
+
+
+| ストレージノード MIP | リモートストレージノードのMIP | 443 | リモートレプリケーションのクラスタペアリング通信 
+
+
+| ストレージノード MIP | S3 / Swift エンドポイント | 443 | （オプション）バックアップとリカバリ用の S3 / Swift エンドポイントへの HTTPS 通信 
+
+
+| ストレージノード MIP | LDAPSサーバ | 636 TCP/UDP | LDAPSルックアップ 
+
+
+| ストレージノード MIP | 管理ノード | 10514 TCP/UDP 、 514 TCP/UDP | syslog 転送 
+
+
+| ストレージノード MIP | syslogサアハ | 10514 TCP/UDP 、 514 TCP/UDP | syslog 転送 
+
+
+| ストレージノード MIP | リモートストレージノードのMIP | 2181 | リモートレプリケーション用のクラスタ間通信 
+
+
+| ストレージノード SIP | S3 / Swift エンドポイント | 80 | （オプション）バックアップとリカバリ用の S3 / Swift エンドポイントへの HTTP 通信 
+
+
+| ストレージノード SIP | コンピューティングノードの SIP | 442 | コンピューティングノード API 、設定と検証、ソフトウェアインベントリへのアクセス 
+
+
+| ストレージノード SIP | S3 / Swift エンドポイント | 443 | （オプション）バックアップとリカバリ用の S3 / Swift エンドポイントへの HTTPS 通信 
+
+
+| ストレージノード SIP | リモートストレージノードのSIP | 2181 | リモートレプリケーション用のクラスタ間通信 
+
+
+| ストレージノード SIP | ストレージノード SIP | 3260 | ノード間 iSCSI 
+
+
+| ストレージノード SIP | リモートストレージノードのSIP | 4000～4020 | リモートレプリケーションのノード間のデータ転送 
+
+
+| システム管理者の PC | ストレージノード MIP | 80 | （ NetApp HCI のみ） NetApp Deployment Engine のランディングページ 
+
+
+| システム管理者の PC | 管理ノード | 442 | 管理ノードへの HTTPS UI アクセス 
+
+
+| システム管理者の PC | ストレージノード MIP | 442 | NetApp Deployment Engine でのストレージノードへの HTTPS UI および API アクセス（ NetApp HCI のみ）の設定と導入の監視 
+
+
+| システム管理者の PC | コンピューティングノードBMC/IPMI H410およびH600シリーズ | 443 | ノードリモート制御へのHTTPS UIおよびAPIアクセス 
+
+
+| システム管理者の PC | 管理ノード | 443 | 管理ノードへの HTTPS UI および API アクセス 
+
+
+| システム管理者の PC | ストレージクラスタのMVIP | 443 | ストレージクラスタへの HTTPS UI および API アクセス 
+
+
+| システム管理者の PC | ストレージノードBMC/IPMI H410およびH600シリーズ | 443 | ノードリモート制御へのHTTPS UIおよびAPIアクセス 
+
+
+| システム管理者の PC | ストレージノード MIP | 443 | HTTPS によるストレージクラスタの作成、ストレージクラスタへの導入後の UI アクセス 
+
+
+| システム管理者の PC | コンピューティングノードBMC/IPMI H410およびH600シリーズ | 623 UDP | RMCPポート。これはIPMI対応のシステムを管理するために必要です。 
+
+
+| システム管理者の PC | ストレージノードBMC/IPMI H410およびH600シリーズ | 623 UDP | RMCPポート。これはIPMI対応のシステムを管理するために必要です。 
+
+
+| システム管理者の PC | 監視ノード | 8080 | 監視ノードのノード Web UI 
+
+
+| vCenter Server | ストレージクラスタのMVIP | 443 | vCenter Plug-in の API アクセス 
+
+
+| vCenter Server | 管理ノード | 8443 | （オプション） vCenter Plug-in の QoSSIOC サービス。 
+
+
+| vCenter Server | ストレージクラスタのMVIP | 8444 | vCenter VASA プロバイダアクセス（ VVol のみ） 
+
+
+| vCenter Server | 管理ノード | 9443 | vCenter Plug-in の登録。登録が完了したら、ポートを閉じることができます。 
+|===
+
+
+== 詳細情報
+
+* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+

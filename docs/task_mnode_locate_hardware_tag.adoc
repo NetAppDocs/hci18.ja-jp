@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: docs/task_mnode_locate_hardware_tag.html 
+summary: REST API UI を使用してコンピューティングノードアセットを管理ノードの構成に追加するには、ハードウェアタグが必要です。 
+keywords: netapp, management node, rest api, hci, hardware tag 
+---
+= コンピューティングノードのハードウェアタグを確認する方法
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+REST API UI を使用してコンピューティングノードアセットを管理ノードの構成に追加するには、ハードウェアタグが必要です。
+
+[role="tabbed-block"]
+====
+.VMware vSphere 7.0
+--
+VMware vSphere Web Client 7.0で、コンピューティングノードのハードウェアタグを探します。
+
+.手順
+. vSphere Web Client ナビゲータでホストを選択します。
+. [ * 構成 * （ Configure * ） ] タブを選択します。
+. サイドバーから、* Hardware *>* Overview *を選択します。ハードウェアタグが表に記載されているかどうかを確認します `System`。
++
+image:../media/hw_tag_70.PNG["Systemテーブルのスクリーンショット"]
+
+. *Tag*の値をコピーして保存します。
+. xref:task_mnode_add_assets.adoc[コンピューティングアセットとコントローラアセットを管理ノードに追加します]です。
+
+
+--
+.VMware vSphere 6.7および6.5
+--
+VMware vSphere Web Client 6.7および6.5で、コンピューティングノードのハードウェアタグを確認します。
+
+.手順
+. vSphere Web Client ナビゲータでホストを選択します。
+. [*Monitor*] タブを選択し、 [*Hardware Health*] を選択します。
+. タグが BIOS の製造元とモデル番号で表示されているかどうかを確認します。
++
+image:../media/hw_tag_67.PNG["Systemテーブルのスクリーンショット"]
+
+. *Tag*の値をコピーして保存します。
+. xref:task_mnode_add_assets.adoc[コンピューティングアセットとコントローラアセットを管理ノードに追加します]です。
+
+
+--
+====

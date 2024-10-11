@@ -1,0 +1,43 @@
+---
+sidebar: sidebar 
+permalink: docs/task_hci_upgrade_all_vsphere.html 
+summary: NetApp HCI の VMware コンポーネントをアップグレードして、 vCenter Plug-in を再インストールする手順を追加で実行できます。 
+keywords: netapp, hci, vSphere components, upgrade, vCenter, ESXi 
+---
+= を使用して、 NetApp HCI システムの vSphere コンポーネントをアップグレードします vCenter Server 向け Element プラグイン
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp HCI 環境の VMware vSphere コンポーネントをアップグレードするときは、 Element Plug-in for vCenter Server についていくつかの追加の手順を実行する必要があります。
+
+.手順
+. vCSAのアップグレードの場合は https://docs.netapp.com/us-en/vcp/vcp_task_qossioc.html#clear-qossioc-settings["クリア"^]、プラグインのQoSSIOC設定（* NetApp Element [QoSSIOC設定]>[QoSSIOC設定]*）。プロセスが完了すると、* QoSSIOC Status *フィールドにと表示されます `Not Configured`。
+. vCSAおよびWindowsのアップグレードの場合、 https://docs.netapp.com/us-en/vcp/task_vcp_unregister.html["登録解除します"^]登録ユーティリティを使用してプラグインが関連付けられているvCenter Serverからプラグイン。
+. https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vcenter.upgrade.doc/GUID-7AFB6672-0B0B-4902-B254-EE6AE81993B2.html["vCenter Server 、 ESXi 、 VM 、その他の VMware コンポーネントを含む vSphere をアップグレードします"^]です。
++
+
+IMPORTANT: VMware vCenter Server 7.0 U3にアップグレードすると、Elementプラグインの導入が失敗します。Spring Framework 4を使用してこの問題を解決するには、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/vCenter_plug-in_deployment_fails_after_upgrading_vCenter_to_version_7.0_U3["こちらの技術情報アーティクル"^]。
+
++
+
+NOTE: のコンピューティングノードのESXiをアップグレードする https://www.netapp.com/pdf.html?item=/media/9489-tr-4823.pdf["2 ノードクラスタ"^]場合は、一度に1つのコンピューティングノードのみをアップグレードして、一時的に使用できなくなり、クラスタクォーラムを維持できるようにします。
+
+. https://docs.netapp.com/us-en/vcp/vcp_task_getstarted.html#register-the-plug-in-with-vcenter["登録"^]vCenter Server向けElementプラグインが再びvCenterに追加されました。
+. https://docs.netapp.com/us-en/vcp/vcp_task_getstarted.html#add-storage-clusters-for-use-with-the-plug-in["クラスタを追加"^]プラグインを使用する。
+. https://docs.netapp.com/us-en/vcp/vcp_task_getstarted.html#configure-qossioc-settings-using-the-plug-in["QoSSIOC を設定します"^]プラグインを使用する。
+. https://docs.netapp.com/us-en/vcp/vcp_task_qossioc.html#enabling-qossioc-automation-on-datastores["QoSSIOC を有効にします"^]（プラグインで制御されているすべてのデータストア）。
+
+
+[discrete]
+== 詳細情報
+
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
+* https://www.netapp.com/pdf.html?item=/media/9489-tr-4823.pdf["NetApp HCI 2 ノードストレージクラスタテクニカルレポート"^]
+

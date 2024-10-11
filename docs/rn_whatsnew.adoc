@@ -1,0 +1,128 @@
+---
+sidebar: sidebar 
+permalink: docs/rn_whatsnew.html 
+summary: このバージョンの NetApp HCI の新機能について説明します。 
+keywords: netapp, hci, element, new, whatsnew 
+---
+= NetApp HCI の新機能
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+ネットアップでは、 NetApp HCI を定期的に更新して、新機能、拡張機能、およびバグ修正を提供しています。NetApp HCI 1.8P1 には、ストレージクラスタ用の Element 12.2 が含まれています。
+
+* この<<NetApp HCI 1.8P1>>セクションでは、NetApp HCIバージョン1.8P1の新機能と更新点について説明します。
+* ここでは<<要素12.2>>、NetApp Element 12.2の新機能とアップデートについて説明します。
+
+
+
+
+== NetApp HCI 1.8P1
+
+NetApp HCI 1.8P1 では、セキュリティと安定性が向上しています。
+
+
+
+=== NetApp HCI ドキュメントの機能拡張
+
+NetApp HCIのアップグレード、拡張、監視、および概念に関する情報に、操作しやすい形式でアクセスできるようになりましlink:index.html["ここをクリック"^]た。
+
+
+
+=== NetApp Element Plug-in for vCenter Server 4.5の可用性
+
+NetApp Element Plug-in for vCenter Server 4.5 は、管理ノード 12.2 および NetApp HCI 1.8P1 リリースでは使用できません。プラグインをアップグレードするには、のドキュメントの手順に従ってlink:concept_hci_upgrade_overview.html["NetApp HCI のアップグレード"]ください。
+
+
+
+=== NetApp Hybrid Cloud Control の機能拡張
+
+NetApp Hybrid Cloud Controlはバージョン1.8P1で拡張されました。 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes["詳細"^]です。
+
+
+
+== 要素12.2
+
+NetApp HCI 1.8P1 には、ストレージクラスタ用の Element 12.2 が含まれています。Element 12.2 では、 SolidFire エンタープライズ SDS 、保存中のソフトウェア暗号化、メンテナンスモード、ボリュームアクセスセキュリティの強化、 UI への Fully Qualified Domain Name （ FQDN ；完全修飾ドメイン名）アクセス、ストレージノードのファームウェアの更新、およびセキュリティの更新が導入されています。
+
+
+
+=== SolidFire エンタープライズ SDS
+
+Element 12.2 では、 SolidFire エンタープライズ SDS （ ESDS ）が導入されています。SolidFire eSDSは、SolidFire eSDSのリファレンス構成を満たす任意のハードウェアで、SolidFireスケールアウトテクノロジとNetApp Elementソフトウェアデータサービスのメリットを提供します。 http://docs.netapp.com/sfe-122/index.jsp?topic=%2Fcom.netapp.doc.sfe-sds-ig%2FGUID-F1BDD19F-AF33-4CDE-B67F-C5E17D4E6DE9.html["詳細"^]です。
+
+詳細については、SolidFire eSDSに関連する新しいElement APIメソッドを次に示し(http://docs.netapp.com/sfe-122/index.jsp?topic=%2Fcom.netapp.doc.sfe-sds-ug%2FGUID-4D335B61-6B68-4B81-AD6E-BCA1E7ABACD5.html["SolidFire ESDS の Element 12.2 API 情報"^]ます）。
+
+* `GetLicenseKey`
+* `SetLicenseKey`
+
+
+
+
+=== ソフトウェアによる保存データの暗号化
+
+Element 12.2 では、保存データのソフトウェア暗号化が導入されています。これは、ストレージクラスタを作成すると有効になります（ SolidFire エンタープライズ SDS ストレージクラスタを作成するとデフォルトで有効になります）。この機能では、ストレージノード内の SSD に格納されているすべてのデータが暗号化され、クライアント IO のパフォーマンスへの影響は非常に小さく（最大 2% ）すぎません。
+
+保存データの暗号化に関連するElement APIメソッドを次に示します（詳細については、を http://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-api/home.html["Element API リファレンスガイド"^]参照）。
+
+* `CreateCluster`
+
+
+
+
+=== メンテナンスモオト
+
+Element 12.2 では、メンテナンスモードが導入されています。このモードでは、ソフトウェアのアップグレードやホストの修復などのメンテナンスのためにストレージノードをオフラインにして、すべてのデータを完全に同期できなくなります。メンテナンスが必要なノードがある場合は、開始前にそれらのノードのメンテナンスモードを有効にすることで、ストレージクラスタの残りのノードへの I/O の影響を最小限に抑えることができます。メンテナンスモードは、アプライアンスノードと SolidFire ESDS ノードの両方で使用できます。
+
+
+
+=== ボリュームアクセスのセキュリティの強化
+
+VLAN （仮想ネットワーク）の関連付けに基づいて、特定のイニシエータへのボリュームアクセスを制限できるようになりました。新規または既存のイニシエータを 1 つ以上の仮想ネットワークに関連付けて、そのイニシエータをこれらの仮想ネットワーク経由でアクセス可能な iSCSI ターゲットに制限できます。
+
+これらのセキュリティ強化に関連して更新されたElement APIメソッドを次に示します（詳細については、を http://docs.netapp.com/sfe-122/topic/com.netapp.doc.sfe-api/home.html["Element API リファレンスガイド"^]参照）。
+
+* `CreateInitiators`
+* `ModifyInitiators`
+* `AddAccount`
+* `ModifyAccount`
+
+
+
+
+=== UI への Fully Qualified Domain Name （ FQDN ；完全修飾ドメイン名）アクセス
+
+Element 12.2 では、 FQDN を使用したクラスタ Web インターフェイスアクセスがサポートされます。Element 12.2 ストレージクラスタで、 FQDN を使用して Element Web UI 、ノード UI 、管理ノード UI などの Web ユーザインターフェイスにアクセスする場合は、最初にストレージクラスタ設定を追加して、クラスタで使用される FQDN を特定する必要があります。この設定を行うと、クラスタはログインセッションを適切にリダイレクトできるようになり、キー管理ツールやアイデンティティプロバイダなどの外部サービスとの統合を強化して多要素認証に対応できます。この機能を使用するには、管理サービスバージョン 2.15 以降が必要です。link:task_nde_access_ui_fqdn.html["詳細"]です。
+
+
+
+=== ストレージノードのファームウェアの更新
+
+Element 12.2には、ストレージノードのファームウェアの更新が含まれています。link:rn_relatedrn.html["詳細"]です。
+
+
+
+=== セキュリティの機能拡張
+
+Element 12.2では、ストレージノードと管理ノードのセキュリティ上の脆弱性が解決されています。 http://security.netapp.com/["詳細"^]これらのセキュリティ強化について。
+
+
+
+=== ドライブに障害が発生した場合の新しい SMART 警告
+
+Element 12.2 では、ドライブの SMART ヘルスデータを使用して、 SolidFire アプライアンスドライブに対して定期的な健全性チェックを実行するようになりました。SMART ヘルスチェックに失敗したドライブは、障害に近い可能性があります。ドライブがSMART健全性チェックに失敗すると、新しい重大度のクラスタエラーが表示されます。 `Drive with serial: <serial number> in slot: <node slot><drive slot> has failed the SMART overall health check. To resolve this fault, replace the drive`
+
+[discrete]
+== 詳細情報
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes["NetApp Hybrid Cloud Control and Management Services Release Notes"^]
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+* https://www.netapp.com/us/documentation/hci.aspx["NetApp HCI のリソースページ"^]
+* http://docs.netapp.com/sfe-122/index.jsp["SolidFire と Element ソフトウェアドキュメントセンター"^]
+* link:firmware_driver_versions.html["NetApp HCI でサポートされるファームウェアとESXiドライバのバージョン、NetApp HCI ストレージノードでサポートされるファームウェアのバージョンとファームウェアのバージョン"]
+

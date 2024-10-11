@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: docs/task_hcc_upgrade_compute_firmware_ansible.html 
+summary: Hシリーズのコンピューティングノードの場合、NetAppには、BMC、BIOS、NICなどのハードウェアコンポーネントのファームウェアアップグレードの自動化に役立つAnsibleのロールが用意されています。 
+keywords: netapp, hci, on premise, cluster, element, compute node, ansible upgrade, upgrade role 
+---
+= Ansible によるコンピューティングノードのファームウェアアップグレードの自動化
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp Hybrid Cloud Control のワークフローを使用して、 NetApp HCI コンピューティングノードのシステムファームウェアを更新できます。これには、 BMC 、 BIOS 、 NIC などのコンポーネントのファームウェアも含まれます。大規模なコンピューティングクラスタを含む環境では、 Ansible を使用してクラスタ全体のローリングアップグレードを実行することでワークフローを自動化できます。
+
+
+NOTE: コンピューティングノードのファームウェアアップグレードを自動化する Ansible のロールはネットアップによって提供されますが、自動化は補助コンポーネントとして機能し、追加のセットアップやソフトウェアコンポーネントの実行が必要となります。Ansible 自動化の変更はベストエフォートベースでのみサポートされます。
+
+
+NOTE: アップグレード用の Ansible のロールは、 NetApp HCI H シリーズのコンピューティングノードでのみ機能します。サードパーティ製コンピューティングノードのアップグレードにはこのロールを使用できません。
+
+.必要なもの
+* *ファームウェアアップグレードの準備と前提条件*: NetApp HCIのインストールは、の手順に記載されているファームウェアアップグレードの準備ができている必要がありますlink:task_hcc_upgrade_compute_node_firmware.html["ファームウェアのアップグレードを実行する"]。
+* * Ansible コントロールノード * で自動化を実行する準備：物理サーバまたは仮想サーバで Ansible でファームウェア更新の自動化を実行します。
+
+
+.タスクの内容
+本番環境では、 NetApp HCI インストール環境のコンピューティングノードを、 1 つずつローリング方式で更新する必要があります。NetApp Hybrid Cloud Control の API は、健全性チェックの実行、コンピューティングノード上の ESXi のメンテナンス、ファームウェアアップグレードを適用するためのコンピューティングノードのリブートなど、コンピューティングノードのファームウェアアップグレードプロセス全体を 1 つのコンピューティングノードに対してオーケストレーションします。Ansible ロールは、コンピューティングノードのグループまたはクラスタ全体に対してファームウェアアップグレードをオーケストレーションするためのオプションを提供します。
+
+.ファームウェアのアップグレードの自動化を始めましょう
+作業を開始するには、に移動し https://github.com/NetApp-Automation/nar_compute_firmware_upgrade["GitHub 上の NetApp Ansible リポジトリ"^]てロールとドキュメントをダウンロードして `nar_compute_nodes_firmware_upgrades`ください。
+
+[discrete]
+== 詳細情報
+
+* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
+

@@ -1,0 +1,66 @@
+---
+sidebar: sidebar 
+permalink: docs/task_mnode_multi_vcenter_config.html 
+summary: REST API UI を使用して複数の vCenter を使用するように NetApp Hybrid Cloud Control を設定できます。 
+keywords: netapp, mnode, management node, multi-vcenter, hci 
+---
+= NetApp Hybrid Cloud Control を複数の vCenter に設定する
+:allow-uri-read: 
+
+
+[role="lead"]
+リンクモードを使用していない 2 つ以上の vCenter からアセットを管理するように NetApp Hybrid Cloud Control を設定できます。
+
+この手順は、最初のインストール後に、最近拡張した環境のアセットを追加する必要がある場合や、新しいアセットが構成に自動的に追加されない場合に使用してください。これらの API を使用して、最近追加されたアセットを環境に追加します。
+
+.必要なもの
+* クラスタバージョンで NetApp Element ソフトウェア 11.3 以降が実行されています。
+* バージョン 11.3 以降を実行する管理ノードを導入しておきます。
+
+
+.手順
+. link:task_mnode_add_assets.html["新しい vCenter をコントローラアセットとして追加する"]を管理ノードの設定に追加します。
+. link:task_mnode_add_assets.html["コンピューティングアセットとして新しいコンピューティングノードを追加します"]を管理ノードの設定に追加します。
++
+
+NOTE: NetAppハイブリッドクラウドコントロールに表示されるまたは `Unable to Detect`エラーの解決 `Hardware ID not available`が必要になる場合がありlink:task_hcc_edit_bmc_info.html["コンピューティングノードの BMC クレデンシャルを変更します"]ます。
+
+. 管理ノードでインベントリサービス API をリフレッシュします。
++
+[listing]
+----
+https://<ManagementNodeIP>/inventory/1/
+----
++
+
+NOTE: また、 NetApp Hybrid Cloud Control の UI でインベントリが更新されるまで 15 分待つこともできます。
+
++
+.. 「 * Authorize * 」（認証）を選択して、次の手順を実行
++
+... クラスタのユーザ名とパスワードを入力します。
+... クライアントIDにと入力し `mnode-client`ます。
+... セッションを開始するには、 * Authorize * を選択します。
+... ウィンドウを閉じます。
+
+
+.. REST API UI で、 * 一部のユーザに一時的な処理を開始 / インストール * を選択します。
+.. [* 試してみてください * ] を選択します。
+.. [* Execute] を選択します。
+.. 応答から、インストールアセットID(`"id"`をコピーします）。
+.. REST API UI から、 * GET / Installations / ｛ id ｝ * を選択します。
+.. [* 試してみてください * ] を選択します。
+.. リフレッシュをに設定します `True`。
+.. インストールアセット ID を *id* フィールドに貼り付けます。
+.. [* Execute] を選択します。
+
+
+. NetApp Hybrid Cloud Control のブラウザをリフレッシュして変更を確認します。
+
+
+[discrete]
+== 詳細情報
+
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
+
