@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: docs/reference_notices_hci.html 
+permalink: legal-notices.html 
 keywords: copyrights, notice, trademarks, patents, privacy, open source 
 summary: 法的通知では、著作権に関する声明、商標、特許などにアクセスできます。 
 translate: false 
