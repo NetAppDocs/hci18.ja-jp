@@ -11,7 +11,7 @@ translate: false
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ../media/
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -51,26 +51,26 @@ link:https://www.netapp.com/company/legal/privacy-policy/["https://www.netapp.co
 
 通知ファイルには、ネットアップソフトウェアで使用されるサードパーティの著作権およびライセンスに関する情報が記載されています。
 
-* link:../media/compute_firmware_bundle_2.146_notices.pdf["Compute Firmware Bundle 2.146 の注意"^]
-* link:../media/storage_firmware_bundle_2.146_notices.pdf["ストレージファームウェアバンドル2.146に関する注意事項"^]
-* link:../media/storage_firmware_bundle_2.99_notices.pdf["ストレージファームウェアバンドル2.99.2に関する注意事項"^]
-* link:../media/compute_firmware_bundle_2.76_notices.pdf["Compute Firmware Bundle 2.76 の注意"^]
-* link:../media/storage_firmware_bundle_2.76_notices.pdf["ストレージファームウェアバンドル2.76に関する注意事項"^]
-* link:../media/compute_firmware_bundle_2.27_notices.pdf["Compute Firmware Bundle 2.27 の注意"^]
-* link:../media/storage_firmware_bundle_2.27_notices.pdf["ストレージファームウェアバンドル2.27に関する注意事項"^]
-* link:../media/compute_iso_notice.pdf["コンピューティングファームウェアの ISO についての通知"^]
-* link:../media/H610S_BMC_notice.pdf["H610S BMC に関する注意事項が表示されます"^]
-* link:../media/mgmt_svcs_2.23_notice.pdf["管理サービス2.23.64（NetApp Element Plug-in for VMware vCenter Server 5.1.12）に関するお知らせ"^]
-* link:../media/mgmt_svcs_2.22_notice.pdf["管理サービス2.22.7（NetApp Element Plug-in for VMware vCenter Server 5.0.37）に関するお知らせ"^]
-* link:../media/mgmt_svcs_2.21_notice.pdf["管理サービス2.21.61（NetApp Element Plug-in for vCenter Server 4.10.12）に関する通知"^]
-* link:../media/2.20_notice.pdf["管理サービス2.20.69（NetApp Element Plug-in for vCenter Server 4.9.14）に関する注意事項"^]
-* link:../media/2.19.48_notice.pdf["管理サービス2.19.48（NetApp Element Plug-in for vCenter Server 4.8.34）に関するお知らせ"^]
-* link:../media/2.18.91_notice.pdf["管理サービス2.18.91（NetApp Element Plug-in for vCenter Server 4.7.10）に関する通知"^]
-* link:../media/2.17.56-notice.pdf["管理サービス2.17.56（NetApp Element Plug-in for vCenter Server 4.6.32）に関する注意事項"^]
-* link:../media/2.17_notice.pdf["管理サービス2.17（vCenter Server 4.6.29用NetApp Element プラグイン）に関する注意事項"^]
-* link:../media/2.16_notice.pdf["管理サービス2.16（vCenter Server 4.6.29用NetApp Element プラグイン）に関する注意事項"^]
-* link:../media/mgmt_svcs_2.14_notice.pdf["管理サービス2.14（vCenter Server 4.5.42用NetApp Element プラグイン）に関する注意事項"^]
-* link:../media/2.13_notice.pdf["管理サービス2.13（vCenter Server 4.5.42用NetApp Element プラグイン）に関する注意事項"^]
-* link:../media/mgmt_svcs2.11_notice.pdf["管理サービス2.11（vCenter Server 4.4.72用NetApp Element プラグイン）に関する注意事項"^]
+* link:./media/compute_firmware_bundle_2.146_notices.pdf["Compute Firmware Bundle 2.146 の注意"^]
+* link:./media/storage_firmware_bundle_2.146_notices.pdf["ストレージファームウェアバンドル2.146に関する注意事項"^]
+* link:./media/storage_firmware_bundle_2.99_notices.pdf["ストレージファームウェアバンドル2.99.2に関する注意事項"^]
+* link:./media/compute_firmware_bundle_2.76_notices.pdf["Compute Firmware Bundle 2.76 の注意"^]
+* link:./media/storage_firmware_bundle_2.76_notices.pdf["ストレージファームウェアバンドル2.76に関する注意事項"^]
+* link:./media/compute_firmware_bundle_2.27_notices.pdf["Compute Firmware Bundle 2.27 の注意"^]
+* link:./media/storage_firmware_bundle_2.27_notices.pdf["ストレージファームウェアバンドル2.27に関する注意事項"^]
+* link:./media/compute_iso_notice.pdf["コンピューティングファームウェアの ISO についての通知"^]
+* link:./media/H610S_BMC_notice.pdf["H610S BMC に関する注意事項が表示されます"^]
+* link:./media/mgmt_svcs_2.23_notice.pdf["管理サービス2.23.64（NetApp Element Plug-in for VMware vCenter Server 5.1.12）に関するお知らせ"^]
+* link:./media/mgmt_svcs_2.22_notice.pdf["管理サービス2.22.7（NetApp Element Plug-in for VMware vCenter Server 5.0.37）に関するお知らせ"^]
+* link:./media/mgmt_svcs_2.21_notice.pdf["管理サービス2.21.61（NetApp Element Plug-in for vCenter Server 4.10.12）に関する通知"^]
+* link:./media/2.20_notice.pdf["管理サービス2.20.69（NetApp Element Plug-in for vCenter Server 4.9.14）に関する注意事項"^]
+* link:./media/2.19.48_notice.pdf["管理サービス2.19.48（NetApp Element Plug-in for vCenter Server 4.8.34）に関するお知らせ"^]
+* link:./media/2.18.91_notice.pdf["管理サービス2.18.91（NetApp Element Plug-in for vCenter Server 4.7.10）に関する通知"^]
+* link:./media/2.17.56-notice.pdf["管理サービス2.17.56（NetApp Element Plug-in for vCenter Server 4.6.32）に関する注意事項"^]
+* link:./media/2.17_notice.pdf["管理サービス2.17（vCenter Server 4.6.29用NetApp Element プラグイン）に関する注意事項"^]
+* link:./media/2.16_notice.pdf["管理サービス2.16（vCenter Server 4.6.29用NetApp Element プラグイン）に関する注意事項"^]
+* link:./media/mgmt_svcs_2.14_notice.pdf["管理サービス2.14（vCenter Server 4.5.42用NetApp Element プラグイン）に関する注意事項"^]
+* link:./media/2.13_notice.pdf["管理サービス2.13（vCenter Server 4.5.42用NetApp Element プラグイン）に関する注意事項"^]
+* link:./media/mgmt_svcs2.11_notice.pdf["管理サービス2.11（vCenter Server 4.4.72用NetApp Element プラグイン）に関する注意事項"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2870307["NetApp HCI 1.8に関する注意事項"^]
 
