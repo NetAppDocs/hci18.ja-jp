@@ -28,6 +28,5 @@ NetApp HCI を導入する前に、次の DNS およびタイムサーバの準�
 [discrete]
 == 詳細情報
 
-* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
 * https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
 

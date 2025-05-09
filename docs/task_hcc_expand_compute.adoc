@@ -111,7 +111,6 @@ IMPORTANT: 一部のコンピューティングノードでは、 vCenter のバ
 [discrete]
 == 詳細情報
 
-* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2856176["NetApp HCI コンピューティングノードとストレージノードの設置とセットアップの手順"^]
 * https://kb.vmware.com/s/article/1003212["VMware のナレッジベース：「 Enhanced vMotion Compatibility （ EVC ） processor support"^]
 

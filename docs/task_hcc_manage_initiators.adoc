@@ -134,5 +134,4 @@ Fibre ChannelイニシエータWWPNの有効な形式は `:Aa:bB:CC:dd:11:22:33:
 * link:concept_hci_initiators.html["イニシエータについて学習する"]
 * link:concept_hci_volume_access_groups.html["ボリュームアクセスグループについて学習する"]
 * https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
 

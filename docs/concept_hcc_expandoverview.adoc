@@ -42,6 +42,5 @@ NOTE: NetApp Deployment Engine で NetApp HCI のコンピューティングリ�
 * link:task_hcc_expand_compute.html["NetApp HCI コンピューティングリソースを展開します"]
 * link:task_hcc_expand_storage.html["NetApp HCI ストレージリソースを展開します"]
 * link:task_hcc_expand_compute_and_storage.html["NetApp HCI のストレージリソースとコンピューティングリソースも同時に拡張します 時間"]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
 * https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
 

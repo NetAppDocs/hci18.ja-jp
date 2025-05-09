@@ -243,5 +243,4 @@ https://<ManagementNodeIP>/storage/1/
 
 * link:concept_hci_clusters.html#authoritative-storage-clusters["権限のあるクラスタです"]
 * https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
 

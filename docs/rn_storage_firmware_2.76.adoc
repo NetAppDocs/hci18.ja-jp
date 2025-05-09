@@ -179,5 +179,4 @@ image::bol_list_bugs_found.png[ストレージファームウェアバンドル�
 == 詳細情報
 
 * https://docs.netapp.com/hci/index.jsp["NetApp HCIドキュメントセンター"^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
 

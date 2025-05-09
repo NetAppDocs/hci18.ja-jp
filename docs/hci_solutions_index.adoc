@@ -17,9 +17,3 @@ keywords: netapp, hci, solutions, performance, scale, multiple, workloads
 NetApp HCI を使用すると、複数のパブリッククラウドプロバイダとオンプレミスに クラウド サービス を導入できます。NetApp HCI を使用すると、クラウドプロバイダと同様のサービスをIT部門のサポートなしでセルフサービスモードで導入できます。
 
 NetApp HCIソリューションの詳細については、を参照して https://docs.netapp.com/us-en/hci-solutions/index.html["NetApp HCI ソリューションのドキュメント"^]ください。
-
-[discrete]
-== 詳細情報
-
-* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
-

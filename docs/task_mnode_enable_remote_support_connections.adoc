@@ -43,5 +43,4 @@ NOTE: デフォルトでは、管理ノードでリモートアクセスの機�
 == 詳細情報
 
 * https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
-* https://www.netapp.com/hybrid-cloud/hci-documentation/["NetApp HCI のリソースページ"^]
 
